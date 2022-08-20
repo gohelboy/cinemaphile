@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --font-main: 'DynaPuff', cursive;
+    --font-text: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #212426;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.app h1 {
+    padding: 34px;
+    font-family: var(--font-main);
+    font-size: 4rem;
+    color: #f9d3b4;
+}
+
+.search {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 34px;
+
+    border-radius: 2rem;
+    background-color: #747474;
+    box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+
+}
+
+.search input {
+    flex: 1;
+    background-color: #747474;
+    border: none;
+    outline: none;
+    width: 80%;
+    padding: 8px 0px;
+
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+    font-weight: 500;
+    color: #000000;
+}
+
+.search img {
+    width: 28px;
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    margin: 3rem 0px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.card {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    border-radius: 1rem;
+    box-shadow: 7px 7px 14px #1c1d1f;
+}
+
+.card:hover .year,
+.card:hover .title {
+    opacity: 1;
+}
+
+.card:hover .image img {
+    filter: grayscale(1);
+    transform: scale(1);
+}
+
+.card .year {
+    z-index: 2;
+    position: absolute;
+    padding: 8px;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    background-color: #eaf9b4;
+    font-size: 1rem;
+    font-family: var(--font-text);
+    transition: 0.4s;
+}
+
+.card .title {
+    z-index: 3;
+    position: absolute;
+    padding: 8px;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    background-color: #eaf9b4;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--font-text);
+    transition: 0.4s;
+}
+
+
+.card .image img {
+    transition: 0.4s;
+    transform: scale(1.1);
+    width: 100%;
+}
+
+
+.empty h2 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: #f9d3b4;
+    font-family: var(--font-main);
+}
+
+.footer {
+
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    color: coral;
+    font-family: var(--font-main);
+    background-color: #1c1d1f;
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .app h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .search {
+        width: 80%;
+    }
+
+    .search img {
+        width: 24px;
+    }
+
+    .container {
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .card {
+
+        width: 166px;
+        height: 255px;
+    }
+
+}
