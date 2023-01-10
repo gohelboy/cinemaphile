@@ -27,7 +27,7 @@ const App = () => {
       <h1>Cinephile</h1>
       <div className="search">
         <input
-          placeholder="Search "
+          placeholder="Search"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -40,9 +40,9 @@ const App = () => {
 
       {movies?.length > 0 ? (
         <div className="container">
-          {movies.map((movie) => (
-            <MovieCard movie={movie} />
-          ))}
+          {movies.map((movie) =>
+            console.log(movie.title)(<MovieCard movie={movie} />)
+          )}
         </div>
       ) : (
         <div className="empty">
